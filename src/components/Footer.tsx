@@ -4,7 +4,7 @@ import Reveal from "./Reveal";
 export const Footer: React.FC = () => {
   return (
     <>
-    <footer className="flex w-full flex-col items-stretch text-white pt-20 px-4 md:px-0.5 max-md:max-w-full bg-gradient-to-b from-[#64462C] to-[#885521]">
+    <footer className="flex w-full flex-col items-stretch text-white pt-20 px-4 md:px-0.5 max-md:max-w-full bg-gradient-to-b from-[#64462C] to-[#885521] font-sans">
       <div className="self-center flex gap-10 gap-x-40 flex-wrap max-md:max-w-full">
         <Reveal variant="fade-up">
           <div className="flex flex-col items-stretch text-sm font-normal leading-relaxed justify-center w-[16.75rem]">
@@ -126,7 +126,7 @@ export const Footer: React.FC = () => {
 
     </footer>
 
-    <div className="bg-[#794717] flex flex-col items-center text-base font-normal justify-center px-16 py-4 max-md:max-w-full max-md:px-5">
+    <div className="bg-[#794717] text-white flex flex-col items-center text-base font-normal justify-center px-16 py-4 max-md:max-w-full max-md:px-5 font-sans">
       <div>2025 @ Dharmik Clothing.All Rights Reserved.</div>
     </div>
     </>

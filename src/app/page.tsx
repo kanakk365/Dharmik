@@ -4,7 +4,7 @@ import { About } from "../components/About";
 import { Services } from "../components/Services";
 import { Process } from "../components/Process";
 import { WhyChooseUs } from "../components/WhyChooseUs";
-import { Collaborates } from "../components/Collaboration";
+// import { Collaborates } from "../components/Collaboration";
 import { MissionVision } from "../components/MissionVission";
 import { Contact } from "../components/Contact";
 import { Footer } from "../components/Footer";
@@ -32,7 +32,7 @@ export default function Home() {
         <Services />
         <Process />
         <WhyChooseUs />
-        <Collaborates />
+        {/* <Collaborates /> */}
         <MissionVision />
         <Contact />
       </main>

@@ -7,7 +7,7 @@ export const Footer: React.FC = () => {
     <footer className="flex w-full flex-col items-stretch text-white pt-20 px-4 md:px-0.5 max-md:max-w-full bg-gradient-to-b from-[#64462C] to-[#885521]">
       <div className="self-center flex gap-10 gap-x-40 flex-wrap max-md:max-w-full">
         <Reveal variant="fade-up">
-          <div className="flex min-w-60 flex-col items-stretch text-sm font-normal leading-relaxed justify-center w-[16.75rem]">
+          <div className="flex flex-col items-stretch text-sm font-normal leading-relaxed justify-center w-[16.75rem]">
             <Image
               width={130}
               height={1.83}
@@ -21,7 +21,7 @@ export const Footer: React.FC = () => {
           </div>
         </Reveal>
 
-        <div className="flex min-w-60 gap-10 gap-x-14 flex-wrap max-md:max-w-full">
+        <div className="flex  gap-10 gap-x-14 flex-wrap max-md:max-w-full">
           <Reveal variant="fade-up" delay={0.05}>
             <div className="flex flex-col items-stretch  rounded-none">
               <h3 className="text-lg font-bold">Services</h3>
@@ -81,7 +81,7 @@ export const Footer: React.FC = () => {
           </Reveal>
 
           <Reveal variant="fade-up" delay={0.15}>
-            <div className="flex min-w-60 flex-col text-base font-normal w-[32rem] max-md:max-w-full">
+            <div className="flex w-80 flex-col text-base font-normal  max-md:max-w-full">
               <h3 className="text-lg font-bold">Contact</h3>
 
               <div className="flex gap-4 mt-10">
@@ -106,17 +106,17 @@ export const Footer: React.FC = () => {
                 <div>dharmikclothing@gmail.com</div>
               </div>
 
-              <div className="self-stretch flex items-stretch gap-4 leading-6 flex-wrap mt-8">
+              <div className="flex gap-4 mt-8">
                 <Image
                   src="/images/locationw.svg"
                   width={24}
                   height={24}
-                  className="w-6 h-6 shrink-0 mt-0.5"
+                  className="w-6 h-6 shrink-0"
                   alt="Location icon"
                 />
-                <div className=" text-sm grow shrink w-[29rem] basis-auto max-md:max-w-full">
-                  MRR COMPLEX, ICICI Bank Building, Plot No.21, NH9 Highway, EP
-                  Lecturers ColonyHayathnager, Telangana 501505
+                <div className="text-sm max-md:max-w-full">
+                  MRR COMPLEX, ICICI Bank Building, Plot No.21, NH9 Highway, EP<br />
+                  Lecturers Colony Hayathnager, Telangana 501505
                 </div>
               </div>
             </div>

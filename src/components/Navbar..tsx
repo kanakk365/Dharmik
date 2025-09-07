@@ -17,9 +17,11 @@ export const Header: React.FC = () => {
       <div className="flex items-center">
         <Image
           src="/images/logo.png"
-          width={82}
-          height={57}
-          className="aspect-[1.44] object-contain w-20"
+          width={112}
+          height={78}
+          priority
+          unoptimized
+          className="object-contain"
           alt="Dharmik Clothing Logo"
         />
       </div>

@@ -117,7 +117,7 @@ export const Services: React.FC = () => {
               >
                 <div className="flex flex-col">
                   <div
-                    className={`${service.bgColor} rounded-xl shadow-lg overflow-hidden w-[18rem] flex flex-col items-center justify-center p-2 transition-all duration-300 ease-in-out hover:scale-102 hover:shadow-2xl hover:-translate-y-2 cursor-pointer relative`}
+                    className={`${service.bgColor} rounded-xl  overflow-hidden w-[18rem] flex flex-col items-center justify-center p-2 transition-all duration-300 ease-in-out hover:scale-102  hover:-translate-y-2 cursor-pointer relative`}
                     onMouseEnter={() => setHoveredCard(index)}
                     onMouseLeave={() => setHoveredCard(null)}
                   >

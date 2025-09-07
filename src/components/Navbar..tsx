@@ -17,8 +17,8 @@ export const Header: React.FC = () => {
       <div className="flex items-center">
         <Image
           src="/images/logo.png"
-          width={112}
-          height={78}
+          width={120}
+          height={83}
           priority
           unoptimized
           className="object-contain"

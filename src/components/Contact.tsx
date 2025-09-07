@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { Twitter, Instagram, Facebook } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 interface FormData {
   firstName: string;
@@ -22,6 +23,9 @@ export const Contact: React.FC = () => {
     message: ''
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -30,10 +34,44 @@ export const Contact: React.FC = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission logic here
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      // EmailJS configuration - Replace with your actual values from EmailJS dashboard
+      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '';
+      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID|| '';
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || '';
+
+      const templateParams = {
+        from_name: formData.firstName,
+        from_email: formData.email,
+        phone: formData.phone,
+        company: formData.company,
+        services: formData.services,
+        message: formData.message,
+        to_email: 'dharmikclothing@gmail.com'
+      };
+
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+
+      setSubmitStatus('success');
+      setFormData({
+        firstName: '',
+        email: '',
+        phone: '',
+        company: '',
+        services: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Error sending email:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -113,6 +151,7 @@ export const Contact: React.FC = () => {
                 placeholder="First name"
                 value={formData.firstName}
                 onChange={handleInputChange}
+                required
                 className="self-stretch my-auto bg-transparent outline-none w-full font-sans"
               />
             </div>
@@ -123,6 +162,7 @@ export const Contact: React.FC = () => {
                 placeholder="Email"
                 value={formData.email}
                 onChange={handleInputChange}
+                required
                 className="self-stretch my-auto bg-transparent outline-none w-full font-sans"
               />
             </div>
@@ -168,14 +208,32 @@ export const Contact: React.FC = () => {
               placeholder="Your message"
               value={formData.message}
               onChange={handleInputChange}
+              required
               className="bg-transparent outline-none w-full resize-none font-sans"
               rows={6}
             />
           </div>
 
+          {/* Status Messages */}
+          {submitStatus === 'success' && (
+            <div className="mt-4 p-3 bg-green-100 border border-green-400 text-green-700 rounded-lg">
+              Message sent successfully! We&apos;ll get back to you soon.
+            </div>
+          )}
+
+          {submitStatus === 'error' && (
+            <div className="mt-4 p-3 bg-red-100 border border-red-400 text-red-700 rounded-lg">
+              Failed to send message. Please try again or contact us directly.
+            </div>
+          )}
+
           <div className="mt-8">
-            <button type="submit" className="w-[12.5rem] min-h-14 px-6 py-3 text-sm leading-relaxed bg-[rgba(136,85,33,1)] text-white font-bold tracking-tight rounded-xl hover:opacity-90 transition-all duration-200 font-sans">
-              Send message
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-[12.5rem] min-h-14 px-6 py-3 text-sm leading-relaxed bg-[rgba(136,85,33,1)] text-white font-bold tracking-tight rounded-xl hover:opacity-90 transition-all duration-200 font-sans disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {isSubmitting ? 'Sending...' : 'Send message'}
             </button>
           </div>
         </form>

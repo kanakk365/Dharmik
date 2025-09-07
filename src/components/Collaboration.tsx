@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Reveal from './Reveal';
 
 export const Collaborates: React.FC = () => {
   const partners = [
@@ -12,26 +13,30 @@ export const Collaborates: React.FC = () => {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl text-[rgba(22,28,45,1)] font-serif leading-none tracking-tighter mb-4">
+          <Reveal as="h2" className="text-4xl md:text-5xl lg:text-6xl text-[rgba(22,28,45,1)] font-serif leading-none tracking-tighter mb-4" variant="fade-up">
             Our Collaborates
-          </h2>
-          <p className="text-lg md:text-xl text-[rgba(55,55,55,1)] font-sans max-w-2xl mx-auto">
-            Industry-leading expertise and trusting us
-          </p>
+          </Reveal>
+          <Reveal variant="fade-up" delay={0.05}>
+            <p className="text-lg md:text-xl text-[rgba(55,55,55,1)] font-sans max-w-2xl mx-auto">
+              Industry-leading expertise and trusting us
+            </p>
+          </Reveal>
         </div>
 
         {/* Partners Grid */}
         <div className="flex justify-center items-center gap-8 md:gap-12">
           {partners.map((partner, index) => (
-            <div key={index} className="flex-shrink-0">
-              <Image
-                width={160}
-                height={120}
-                src={partner}
-                className="w-32 h-24 md:w-40 md:h-32 lg:w-48 lg:h-36 object-contain"
-                alt={`Partner ${index + 1}`}
-              />
-            </div>
+            <Reveal key={partner} variant="fade-up" delay={index * 0.06}>
+              <div className="flex-shrink-0">
+                <Image
+                  width={160}
+                  height={120}
+                  src={partner}
+                  className="w-32 h-24 md:w-40 md:h-32 lg:w-48 lg:h-36 object-contain"
+                  alt={`Partner ${index + 1}`}
+                />
+              </div>
+            </Reveal>
           ))}
         </div>
       </div>

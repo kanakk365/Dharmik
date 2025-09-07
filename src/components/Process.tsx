@@ -1,4 +1,5 @@
 import React from "react";
+import Reveal from "./Reveal";
 
 export const Process: React.FC = () => {
   return (
@@ -9,13 +10,15 @@ export const Process: React.FC = () => {
       <div className="mx-auto max-w-5xl">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold font-serif text-white mb-6">
+          <Reveal as="h2" className="text-4xl md:text-5xl font-bold font-serif text-white mb-6" variant="fade-up">
             How Your Brand Comes to Life
-          </h2>
-          <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed font-sans">
-            6-step process ensures your clothing brand is built with quality,
-            creativity, and expertise at every stage.
-          </p>
+          </Reveal>
+          <Reveal variant="fade-up" delay={0.05}>
+            <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed font-sans">
+              6-step process ensures your clothing brand is built with quality,
+              creativity, and expertise at every stage.
+            </p>
+          </Reveal>
         </div>
 
         {/* Desktop Layout */}
@@ -37,13 +40,15 @@ export const Process: React.FC = () => {
                     className="flex items-center justify-end pr-2 text-right text-white"
                     style={{ gridRow: index * 2 + 1, gridColumn: 1 }}
                   >
-                    <div className="max-w-40 min-h-16 flex items-center justify-center bg-[#8b6a49] p-2 rounded-lg">
-                      <h3 className="text-base text-center font-semibold font-serif">
-                        {index === 0 && "Consultation & Planning"}
-                        {index === 2 && "Material Sourcing"}
-                        {index === 4 && "Packaging & Delivery"}
-                      </h3>
-                    </div>
+                    <Reveal variant="fade-right" delay={index * 0.06}>
+                      <div className="max-w-40 min-h-16 flex items-center justify-center bg-[#8b6a49] p-2 rounded-lg">
+                        <h3 className="text-base text-center font-semibold font-serif">
+                          {index === 0 && "Consultation & Planning"}
+                          {index === 2 && "Material Sourcing"}
+                          {index === 4 && "Packaging & Delivery"}
+                        </h3>
+                      </div>
+                    </Reveal>
                   </div>
                 )}
 
@@ -52,9 +57,11 @@ export const Process: React.FC = () => {
                   className="relative z-10 flex items-center justify-center"
                   style={{ gridRow: index * 2 + 1, gridColumn: 2 }}
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white font-semibold font-sans text-[#885521] shadow-md ring-2 ring-white/70">
-                    {index + 1}
-                  </div>
+                  <Reveal variant="scale" delay={index * 0.06}>
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white font-semibold font-sans text-[#885521] shadow-md ring-2 ring-white/70">
+                      {index + 1}
+                    </div>
+                  </Reveal>
                 </div>
 
                 {/* Right side text - show for even steps (2, 4, 6) */}
@@ -63,13 +70,15 @@ export const Process: React.FC = () => {
                     className="flex items-center justify-start pl-2 text-left text-white"
                     style={{ gridRow: index * 2 + 1, gridColumn: 3 }}
                   >
-                    <div className="max-w-40 min-h-16 flex items-center justify-center bg-[#8b6a49] p-2 rounded-lg">
-                      <h3 className="text-base text-center font-semibold font-serif">
-                        {index === 1 && "Design & Development"}
-                        {index === 3 && "Production & Quality Control"}
-                        {index === 5 && "Packaging & Delivery"}
-                      </h3>
-                    </div>
+                    <Reveal variant="fade-left" delay={index * 0.06}>
+                      <div className="max-w-40 min-h-16 flex items-center justify-center bg-[#8b6a49] p-2 rounded-lg">
+                        <h3 className="text-base text-center font-semibold font-serif">
+                          {index === 1 && "Design & Development"}
+                          {index === 3 && "Production & Quality Control"}
+                          {index === 5 && "Packaging & Delivery"}
+                        </h3>
+                      </div>
+                    </Reveal>
                   </div>
                 )}
               </React.Fragment>
@@ -84,9 +93,11 @@ export const Process: React.FC = () => {
                   className="flex items-center justify-center"
                   style={{ gridRow: index * 2 + 2, gridColumn: 2 }}
                 >
-                  <div
-                    className={`w-32 border-t-2 border-dashed border-white/70 ${sideClass}`}
-                  ></div>
+                  <Reveal variant={index % 2 === 0 ? "fade-left" : "fade-right"} delay={index * 0.06}>
+                    <div
+                      className={`w-32 border-t-2 border-dashed border-white/70 ${sideClass}`}
+                    ></div>
+                  </Reveal>
                 </div>
               );
             })}
@@ -112,23 +123,29 @@ export const Process: React.FC = () => {
               >
                 {/* Numbered circle */}
                 <div className="flex-shrink-0">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white font-semibold font-sans text-[#885521] shadow-md ring-2 ring-white/70">
-                    {index + 1}
-                  </div>
+                  <Reveal variant="scale" delay={index * 0.06}>
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white font-semibold font-sans text-[#885521] shadow-md ring-2 ring-white/70">
+                      {index + 1}
+                    </div>
+                  </Reveal>
                 </div>
 
                 {/* Vertical line between circle and text box */}
                 <div className="flex-shrink-0 flex flex-col items-center">
-                  <div className="w-0.5 h-16 bg-white/70"></div>
+                  <Reveal variant="fade-up" delay={index * 0.06}>
+                    <div className="w-0.5 h-16 bg-white/70"></div>
+                  </Reveal>
                 </div>
 
                 {/* Text content */}
                 <div className="flex-1">
-                  <div className="bg-[#8b6a49] p-3 rounded-lg min-h-28 flex items-center">
-                    <h3 className="text-sm font-semibold font-serif text-white text-center">
-                      {stepTexts[index]}
-                    </h3>
-                  </div>
+                  <Reveal variant="fade-up" delay={index * 0.06 + 0.03}>
+                    <div className="bg-[#8b6a49] p-3 rounded-lg min-h-28 flex items-center">
+                      <h3 className="text-sm font-semibold font-serif text-white text-center">
+                        {stepTexts[index]}
+                      </h3>
+                    </div>
+                  </Reveal>
                 </div>
               </div>
             );

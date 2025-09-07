@@ -85,7 +85,7 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <section className="flex flex-col relative min-h-[41rem] w-full items-center justify-center px-20  max-md:max-w-full max-md:px-5 py-28 ">
+    <section id="contact" className="flex flex-col relative min-h-[41rem] w-full items-center justify-center px-20  max-md:max-w-full max-md:px-5 py-28 ">
       <Image
         src="https://api.builder.io/api/v1/image/assets/TEMP/43a7ff149b3d053d8e1c3a371e18b2cf97052b78?placeholderIfAbsent=true"
         fill

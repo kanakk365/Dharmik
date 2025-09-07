@@ -44,9 +44,9 @@ export const Header: React.FC = () => {
       </nav>
 
       {/* Desktop Contact Button */}
-      <button className="hidden md:block px-6 py-2 bg-[#64462c] text-white font-bold text-sm rounded-md hover:opacity-90 transition-all duration-200 font-sans">
+      <a href="#contact" className="hidden md:block px-6 py-2 bg-[#64462c] text-white font-bold text-sm rounded-md hover:opacity-90 transition-all duration-200 font-sans">
         CONTACT US
-      </button>
+      </a>
 
       {/* Mobile Menu Button */}
       <button
@@ -60,7 +60,7 @@ export const Header: React.FC = () => {
       </button>
 
       {/* Mobile Menu */}
-      <div className={`md:hidden fixed top-0 left-0 w-full h-screen bg-white z-50 transform transition-transform duration-300 ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+      <div className={`md:hidden fixed top-0 right-0 w-full h-screen bg-white z-50 transform transition-transform duration-300 ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="flex flex-col items-center justify-center h-full space-y-8">
           <button
             onClick={closeMobileMenu}
@@ -88,9 +88,9 @@ export const Header: React.FC = () => {
             </a>
           </nav>
 
-          <button className="mt-8 px-8 py-3 bg-[#64462c] text-white font-bold text-lg rounded-md hover:opacity-90 transition-all duration-200 font-sans" onClick={closeMobileMenu}>
+          <a href="#contact" className="mt-8 px-8 py-3 bg-[#64462c] text-white font-bold text-lg rounded-md hover:opacity-90 transition-all duration-200 font-sans block text-center" onClick={closeMobileMenu}>
             CONTACT US
-          </button>
+          </a>
         </div>
       </div>
     </header>

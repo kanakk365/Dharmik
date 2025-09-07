@@ -168,7 +168,7 @@ export const Contact: React.FC = () => {
         <Reveal variant="fade-left" delay={0.1}>
         <form
           onSubmit={handleSubmit}
-          className="self-stretch min-w-96 text-sm text-[rgba(141,141,141,1)] my-auto rounded-none max-md:max-w-full max-md:w-full font-sans"
+          className="self-stretch min-w-80 text-sm text-[rgba(141,141,141,1)] my-auto rounded-none max-md:max-w-full max-md:w-full font-sans"
         >
           <div className="flex w-full items-stretch gap-8 font-normal flex-wrap max-md:gap-4 max-md:flex-col max-md:max-w-full">
             <div className="bg-[rgba(136,85,33,0.06)] flex items-center gap-2.5 grow shrink basis-auto px-4 py-3.5 rounded-lg font-sans max-md:w-full max-md:px-6 max-md:basis-full">

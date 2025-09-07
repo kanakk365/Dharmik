@@ -47,9 +47,9 @@ export const MissionVision: React.FC = () => {
                 <div className="rounded-lg overflow-hidden">
                   <Image
                     width={233}
-                    height={100}
+                    height={100} 
                     src="/images/m3.jpg"
-                    className="aspect-[2.33] object-cover w-full h-24 md:h-32"
+                    className="aspect-[2.33] object-cover w-full h-40 md:h-52"
                     alt="Mission image 3"
                   />
                 </div>

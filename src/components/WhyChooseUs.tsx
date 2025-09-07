@@ -54,7 +54,7 @@ export const WhyChooseUs: React.FC = () => {
         className="absolute h-full w-full object-cover inset-0"
         alt="Why choose us background"
       />
-      <div className="relative flex w-full max-w-[73.375rem] flex-col items-stretch max-md:max-w-full">
+      <div className="relative flex w-full max-w-[73.375rem] flex-col items-center max-md:max-w-full">
         <div className="self-center flex w-[45.25rem] max-w-full flex-col items-center font-normal font-urbanist">
           <Reveal as="h2" className="text-[rgba(22,28,45,1)] text-6xl leading-none tracking-tighter text-center max-md:max-w-full max-md:text-4xl font-serif" variant="fade-up">
             Why Choose Dharmik Clothing?
@@ -87,14 +87,14 @@ export const WhyChooseUs: React.FC = () => {
                       />
                     )}
                     <h3
-                      className={`text-2xl font-medium  font-abhaya-libre ${
+                      className={`text-2xl font-medium text-center font-abhaya-libre ${
                         feature.hasIcon ? "mt-4" : ""
                       }`}
                     >
                       {feature.title}
                     </h3>
                     <p
-                      className={`text-lg font-normal  font-urbanist ${
+                      className={`text-lg font-normal text-center font-urbanist ${
                         feature.hasIcon ? "self-stretch" : ""
                       } mt-4`}
                     >
@@ -126,14 +126,14 @@ export const WhyChooseUs: React.FC = () => {
                       />
                     )}
                     <h3
-                      className={`text-3xl font-medium leading-relaxed font-abhaya-libre ${
+                      className={`text-3xl font-medium leading-relaxed text-center font-abhaya-libre ${
                         feature.hasIcon ? "mt-4" : ""
                       }`}
                     >
                       {feature.title}
                     </h3>
                     <p
-                      className={`text-xl font-normal leading-relaxed font-urbanist ${
+                      className={`text-xl font-normal leading-relaxed text-center font-urbanist ${
                         feature.hasIcon ? "self-stretch" : ""
                       } mt-4`}
                     >

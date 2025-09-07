@@ -11,17 +11,7 @@ export const Collaborates: React.FC = () => {
   return (
     <section className="bg-[rgba(255,251,250,1)] py-16 px-6">
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <Reveal as="h2" className="text-4xl md:text-5xl lg:text-6xl text-[rgba(22,28,45,1)] font-serif leading-none tracking-tighter mb-4" variant="fade-up">
-            Our Collaborates
-          </Reveal>
-          <Reveal variant="fade-up" delay={0.05}>
-            <p className="text-lg md:text-xl text-[rgba(55,55,55,1)] font-sans max-w-2xl mx-auto">
-              Industry-leading expertise and trusting us
-            </p>
-          </Reveal>
-        </div>
+        
 
         {/* Partners Grid */}
         <div className="flex justify-center items-center gap-8 md:gap-12">

@@ -47,21 +47,21 @@ export const Services: React.FC = () => {
         className="absolute h-full w-full object-cover inset-0"
         alt="Services background"
       />
-      <div className="relative flex w-full max-w-[1162px] flex-col items-stretch max-md:max-w-full">
+      <div className="relative flex w-full max-w-[72.625rem] flex-col items-stretch max-md:max-w-full">
         {/* Header Section */}
-        <div className="self-center w-[833px] max-w-full font-normal text-center">
-          <h2 className="text-[rgba(22,28,45,1)] leading-tight text-[54px] tracking-[-2px] max-md:max-w-full max-md:text-[40px] font-serif">
+        <div className="self-center w-[52.125rem] max-w-full font-normal text-center">
+          <h2 className="text-[rgba(22,28,45,1)] leading-tight text-5xl tracking-tight max-md:max-w-full max-md:text-4xl font-serif">
             Your Brand Journey, All in One Place.
           </h2>
-          <p className="text-neutral-600 text-xl leading-[58px] mt-2 max-md:max-w-full font-sans">
+          <p className="text-neutral-600 text-xl leading-relaxed mt-2 max-md:max-w-full font-sans">
             From fabrics to your final store launch — we help you build, scale,
             and shine in the fashion world.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="mt-20 max-md:max-w-full max-md:mt-10">
-          <div className="grid grid-cols-3 gap-8 gap-y-12 max-md:grid-cols-1">
+        <div className="mt-20 max-md:max-w-full max-md:mt-10 flex justify-center">
+          <div className="grid grid-cols-3 gap-8 gap-y-12 max-md:grid-cols-1 place-items-center">
             {services.map((service, index) => (
               <div key={service.title} className="flex flex-col">
                 <div

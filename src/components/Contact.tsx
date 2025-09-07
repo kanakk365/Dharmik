@@ -1,6 +1,7 @@
 "use client";
 import { useState } from 'react';
 import Image from 'next/image';
+import { Twitter, Instagram, Facebook } from 'lucide-react';
 
 interface FormData {
   firstName: string;
@@ -36,7 +37,7 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <section className="flex flex-col relative min-h-[653px] w-full items-center justify-center px-[70px] py-[89px] max-md:max-w-full max-md:px-5">
+    <section className="flex flex-col relative min-h-[41rem] w-full items-center justify-center px-20  max-md:max-w-full max-md:px-5 py-28 ">
       <Image
         src="https://api.builder.io/api/v1/image/assets/TEMP/43a7ff149b3d053d8e1c3a371e18b2cf97052b78?placeholderIfAbsent=true"
         fill
@@ -44,145 +45,136 @@ export const Contact: React.FC = () => {
         alt="Contact background"
       />
       
-      <div className="relative flex items-center gap-[40px_53px] justify-center flex-wrap max-md:max-w-full">
-        <div className="self-stretch min-w-60 min-h-[467px] w-[508px] my-auto max-md:max-w-full">
-          <div className="flex w-full max-w-[530px] flex-col max-md:max-w-full">
-            <h2 className="text-[rgba(22,28,45,1)] text-[54px] font-normal leading-none tracking-[-1.8px] text-center max-md:text-[40px]">
+      <div className="relative flex items-center gap-10 gap-x-14 justify-center flex-wrap max-md:max-w-full">
+        <div className="self-stretch min-w-60 min-h-[30rem] w-[32rem] my-auto max-md:max-w-full">
+          <div className="flex w-full max-w-[33rem] flex-col max-md:max-w-full">
+            <h2 className="text-[rgba(22,28,45,1)] text-6xl font-normal leading-none tracking-tighter text-left max-md:text-4xl font-serif">
               Get in Touch
             </h2>
-            <p className="text-[rgba(136,85,33,1)] text-xl font-normal leading-[34px] self-stretch mt-4 max-md:max-w-full">
+            <p className="text-[rgba(136,85,33,1)] text-xl font-normal leading-relaxed self-stretch mt-4 max-md:max-w-full font-sans">
               Have a question or a project in mind? I&apos;d love to hear from you. Let&apos;s chat and make something amazing together.
             </p>
             
-            <div className="flex gap-4 text-base text-[#1F1F1F] font-normal mt-16 max-md:mt-10">
+            <div className="flex gap-4 text-base text-[#1F1F1F] font-normal mt-16 max-md:mt-10 font-sans">
               <Image
-                src="https://api.builder.io/api/v1/image/assets/TEMP/ccaf3f892a3e2c0c56fa237cfb2794d448c543ed?placeholderIfAbsent=true"
+                src="/images/phone.svg"
                 width={24}
                 height={24}
-                className="aspect-[1] object-contain w-6 shrink-0"
+                className="w-6 h-6 shrink-0"
                 alt="Phone icon"
               />
               <div>+91 76808 29790</div>
             </div>
-            
-            <div className="flex gap-4 text-base text-[#1F1F1F] font-normal whitespace-nowrap mt-8">
+
+            <div className="flex gap-4 text-base text-[#1F1F1F] font-normal whitespace-nowrap mt-8 font-sans">
               <Image
-                src="https://api.builder.io/api/v1/image/assets/TEMP/e0cc79b2f8cdbf127b9720d2f4f35ba893dbd708?placeholderIfAbsent=true"
+                src="/images/mail.svg"
                 width={24}
                 height={24}
-                className="aspect-[1] object-contain w-6 shrink-0"
-                alt="Email icon"
+                className="w-6 h-6 shrink-0"
+                alt="Mail icon"
               />
               <div>dharmikclothing@gmail.com</div>
             </div>
-            
-            <div className="flex items-stretch gap-4 text-base text-[#1F1F1F] font-normal leading-6 flex-wrap mt-8">
+
+            <div className="flex  gap-4 text-base text-[#1F1F1F] font-normal leading-6  mt-8 font-sans">
               <Image
-                src="https://api.builder.io/api/v1/image/assets/TEMP/224ab7608d28c905ad3306c0961d3c86540aa588?placeholderIfAbsent=true"
+                src="/images/location.svg"
                 width={24}
                 height={24}
-                className="aspect-[1] object-contain w-6 shrink-0"
+                className="w-6 h-6 shrink-0 mt-0.5"
                 alt="Location icon"
               />
-              <div className="basis-auto grow shrink max-md:max-w-full">
+              <div className="basis-auto text-sm grow shrink max-md:max-w-full">
                 MRR COMPLEX, ICICI Bank Building, Plot No.21, NH9 Highway, EP Lecturers ColonyHayathnager, Telangana 501505
               </div>
             </div>
             
-            <div className="flex items-center gap-6 justify-center mt-[46px] max-md:mt-10">
-              <div className="self-stretch flex min-h-[30px] items-center gap-2.5 justify-center w-[30px] my-auto pl-2 pr-[7px] rounded-[86px]">
-                <Image
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/c7274f377bb8dea2983fdbd6191daa7b352de7f2?placeholderIfAbsent=true"
-                  width={15}
-                  height={15}
-                  className="aspect-[1] object-contain w-[15px] self-stretch my-auto"
-                  alt="Social media icon 1"
-                />
+            <div className="flex items-center gap-6  mt-12 max-md:mt-10">
+              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-b from-[#885521] to-[#64462C] hover:from-[#6B4420] hover:to-[#4A3422] transition-all duration-200">
+                <Twitter className="w-4 h-4 text-white" />
               </div>
-              <div className="self-stretch flex min-h-[30px] items-center gap-2.5 justify-center w-[30px] my-auto px-2 rounded-[86px]">
-                <Image
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/f0992d649ef07458d1767af1da9c2b1df0cb04a5?placeholderIfAbsent=true"
-                  width={8}
-                  height={15}
-                  className="aspect-[0.53] object-contain w-2 self-stretch my-auto"
-                  alt="Social media icon 2"
-                />
+              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-b from-[#885521] to-[#64462C] hover:from-[#6B4420] hover:to-[#4A3422] transition-all duration-200">
+                <Instagram className="w-4 h-4 text-white" />
+              </div>
+              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-b from-[#885521] to-[#64462C] hover:from-[#6B4420] hover:to-[#4A3422] transition-all duration-200">
+                <Facebook className="w-4 h-4 text-white" />
               </div>
             </div>
           </div>
         </div>
         
-        <form onSubmit={handleSubmit} className="self-stretch min-w-60 text-sm text-[rgba(141,141,141,1)] w-[679px] my-auto rounded-[0px_0px_0px_0px] max-md:max-w-full">
-          <div className="flex w-full items-stretch gap-[29px] font-normal flex-wrap max-md:max-w-full">
-            <div className="bg-[rgba(136,85,33,0.06)] flex items-center gap-2.5 grow shrink basis-auto px-4 py-3.5 rounded-lg">
+        <form onSubmit={handleSubmit} className="self-stretch min-w-60 text-sm text-[rgba(141,141,141,1)] w-[43rem] my-auto rounded-none max-md:max-w-full font-sans">
+          <div className="flex w-full items-stretch gap-8 font-normal flex-wrap max-md:max-w-full">
+            <div className="bg-[rgba(136,85,33,0.06)] flex items-center gap-2.5 grow shrink basis-auto px-4 py-3.5 rounded-lg font-sans">
               <input
                 type="text"
                 name="firstName"
                 placeholder="First name"
                 value={formData.firstName}
                 onChange={handleInputChange}
-                className="self-stretch my-auto bg-transparent outline-none w-full"
+                className="self-stretch my-auto bg-transparent outline-none w-full font-sans"
               />
             </div>
-            <div className="bg-[rgba(136,85,33,0.06)] flex items-center gap-2.5 whitespace-nowrap grow shrink basis-auto px-4 py-3.5 rounded-lg">
+            <div className="bg-[rgba(136,85,33,0.06)] flex items-center gap-2.5 whitespace-nowrap grow shrink basis-auto px-4 py-3.5 rounded-lg font-sans">
               <input
                 type="email"
                 name="email"
                 placeholder="Email"
                 value={formData.email}
                 onChange={handleInputChange}
-                className="self-stretch my-auto bg-transparent outline-none w-full"
+                className="self-stretch my-auto bg-transparent outline-none w-full font-sans"
               />
             </div>
           </div>
-          
-          <div className="flex w-full items-stretch gap-[29px] font-normal flex-wrap mt-6 max-md:max-w-full">
-            <div className="bg-[rgba(136,85,33,0.06)] flex items-center gap-2.5 grow shrink basis-auto px-4 py-3.5 rounded-lg">
+
+          <div className="flex w-full items-stretch gap-8 font-normal flex-wrap mt-6 max-md:max-w-full">
+            <div className="bg-[rgba(136,85,33,0.06)] flex items-center gap-2.5 grow shrink basis-auto px-4 py-3.5 rounded-lg font-sans">
               <input
                 type="tel"
                 name="phone"
                 placeholder="Phone number"
                 value={formData.phone}
                 onChange={handleInputChange}
-                className="self-stretch my-auto bg-transparent outline-none w-full"
+                className="self-stretch my-auto bg-transparent outline-none w-full font-sans"
               />
             </div>
-            <div className="bg-[rgba(136,85,33,0.06)] flex items-center gap-2.5 whitespace-nowrap grow shrink basis-auto px-4 py-3.5 rounded-lg">
+            <div className="bg-[rgba(136,85,33,0.06)] flex items-center gap-2.5 whitespace-nowrap grow shrink basis-auto px-4 py-3.5 rounded-lg font-sans">
               <input
                 type="text"
                 name="company"
                 placeholder="Company"
                 value={formData.company}
                 onChange={handleInputChange}
-                className="self-stretch my-auto bg-transparent outline-none w-full"
+                className="self-stretch my-auto bg-transparent outline-none w-full font-sans"
               />
             </div>
           </div>
-          
-          <div className="bg-[rgba(136,85,33,0.06)] flex items-center gap-2.5 font-normal mt-6 px-4 py-3.5 rounded-lg">
+
+          <div className="bg-[rgba(136,85,33,0.06)] flex items-center gap-2.5 font-normal mt-6 px-4 py-3.5 rounded-lg font-sans">
             <input
               type="text"
               name="services"
               placeholder="Services interested in"
               value={formData.services}
               onChange={handleInputChange}
-              className="self-stretch my-auto bg-transparent outline-none w-full"
+              className="self-stretch my-auto bg-transparent outline-none w-full font-sans"
             />
           </div>
-          
-          <div className="bg-[rgba(136,85,33,0.06)] flex min-h-[168px] gap-2.5 font-normal mt-6 pt-[13px] pb-[134px] px-4 rounded-lg max-md:pb-[100px]">
+
+          <div className="bg-[rgba(136,85,33,0.06)] flex min-h-[10.5rem] gap-2.5 font-normal mt-6 pt-2 pb-24 px-4 rounded-lg max-md:pb-20 font-sans">
             <textarea
               name="message"
               placeholder="Your message"
               value={formData.message}
               onChange={handleInputChange}
-              className="bg-transparent outline-none w-full resize-none"
+              className="bg-transparent outline-none w-full resize-none font-sans"
               rows={6}
             />
           </div>
-          
+
           <div className="mt-8">
-            <button type="submit" className="w-[198px] min-h-14 px-6 py-3 text-[15px] leading-[29px] bg-[rgba(136,85,33,1)] text-white font-bold tracking-[-0.54px] rounded-xl hover:opacity-90 transition-all duration-200">
+            <button type="submit" className="w-[12.5rem] min-h-14 px-6 py-3 text-sm leading-relaxed bg-[rgba(136,85,33,1)] text-white font-bold tracking-tight rounded-xl hover:opacity-90 transition-all duration-200 font-sans">
               Send message
             </button>
           </div>

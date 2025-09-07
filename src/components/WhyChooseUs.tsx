@@ -44,7 +44,7 @@ export const WhyChooseUs: React.FC = () => {
   return (
     <section
       id="why-us"
-      className="flex flex-col relative min-h-[946px] items-center justify-center px-20 py-[81px] max-md:max-w-full max-md:mr-[3px] max-md:px-5"
+      className="flex flex-col relative min-h-[59.125rem] items-center justify-center px-20 py-20 max-md:max-w-full max-md:mr-0.5 max-md:px-5"
     >
       <Image
         width={1174}
@@ -53,23 +53,23 @@ export const WhyChooseUs: React.FC = () => {
         className="absolute h-full w-full object-cover inset-0"
         alt="Why choose us background"
       />
-      <div className="relative flex w-full max-w-[1174px] flex-col items-stretch max-md:max-w-full">
-        <div className="self-center flex w-[724px] max-w-full flex-col items-center font-normal font-urbanist">
-          <h2 className="text-[rgba(22,28,45,1)] text-[54px] leading-none tracking-[-1.8px] text-center max-md:max-w-full max-md:text-[40px] font-serif">
+      <div className="relative flex w-full max-w-[73.375rem] flex-col items-stretch max-md:max-w-full">
+        <div className="self-center flex w-[45.25rem] max-w-full flex-col items-center font-normal font-urbanist">
+          <h2 className="text-[rgba(22,28,45,1)] text-6xl leading-none tracking-tighter text-center max-md:max-w-full max-md:text-4xl font-serif">
             Why Choose Dharmik Clothing?
           </h2>
-          <p className="text-[rgba(55,55,55,1)] text-xl leading-[58px] mt-2 max-md:max-w-full font-urbanist">
+          <p className="text-[rgba(55,55,55,1)] text-xl leading-relaxed mt-2 max-md:max-w-full font-urbanist">
             Industry-leading expertise and commitment to your success
           </p>
         </div>
 
-        <div className="h-[570px] text-black text-center mt-[88px] max-md:max-w-full max-md:mt-10 font-urbanist">
+        <div className="h-[35.625rem] text-black text-center mt-14 max-md:max-w-full max-md:mt-10 font-urbanist">
           <div className="w-full max-md:max-w-full">
-            <div className="flex items-center gap-[40px_143px] flex-wrap max-md:max-w-full">
+            <div className="flex items-center gap-10 gap-x-24 flex-wrap max-md:max-w-full">
               {features.slice(0, 3).map((feature) => (
                 <div
                   key={feature.title}
-                  className={`self-stretch min-w-60 grow shrink w-[237px] my-auto ${
+                  className={`self-stretch min-w-60 grow shrink w-[14.8125rem] my-auto ${
                     feature.hasIcon ? "flex flex-col items-center" : ""
                   }`}
                 >
@@ -78,7 +78,7 @@ export const WhyChooseUs: React.FC = () => {
                       width={81}
                       height={81}
                       src={feature.icon}
-                      className="aspect-[1] object-contain w-[81px] rounded-full p-4"
+                      className="aspect-[1] object-contain w-20 rounded-full p-4"
                       style={{ backgroundColor: '#744d28' }}
                       alt={`${feature.title} icon`}
                     />
@@ -101,7 +101,7 @@ export const WhyChooseUs: React.FC = () => {
               ))}
             </div>
 
-            <div className="flex items-center gap-[40px_143px] flex-wrap mt-[81px] max-md:max-w-full max-md:mt-10">
+            <div className="flex items-center gap-10 gap-x-24 flex-wrap mt-20 max-md:max-w-full max-md:mt-10">
               {features.slice(3, 6).map((feature) => (
                 <div
                   key={feature.title}
@@ -109,27 +109,27 @@ export const WhyChooseUs: React.FC = () => {
                     feature.hasIcon
                       ? "flex min-w-60 flex-col items-center"
                       : "min-w-60"
-                  } grow shrink w-[237px] my-auto`}
+                  } grow shrink w-[14.8125rem] my-auto`}
                 >
                   {feature.hasIcon && (
                     <Image
                       width={81}
                       height={81}
                       src={feature.icon}
-                      className="aspect-[1] object-contain w-[81px] rounded-full p-4"
+                      className="aspect-[1] object-contain w-20 rounded-full p-4"
                       style={{ backgroundColor: '#744d28' }}
                       alt="Sustainable options icon"
                     />
                   )}
                   <h3
-                    className={`text-3xl font-medium leading-[58px] font-abhaya-libre ${
+                    className={`text-3xl font-medium leading-relaxed font-abhaya-libre ${
                       feature.hasIcon ? "mt-4" : ""
                     }`}
                   >
                     {feature.title}
                   </h3>
                   <p
-                    className={`text-xl font-normal leading-[37px] font-urbanist ${
+                    className={`text-xl font-normal leading-relaxed font-urbanist ${
                       feature.hasIcon ? "self-stretch" : ""
                     } mt-4`}
                   >

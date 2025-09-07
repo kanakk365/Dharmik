@@ -4,37 +4,35 @@ import Image from 'next/image';
 export const Collaborates: React.FC = () => {
   const partners = [
     '/images/c1.png',
-    '/images/c2.png',
-    '/images/c1.png',
-    '/images/c2.png',
-    '/images/c1.png'
+    '/images/c2.png'
   ];
 
   return (
-    <section className="bg-[rgba(255,251,250,1)] flex min-h-[33.375rem] flex-col items-center justify-center px-24 py-20 max-md:max-w-full max-md:px-5">
-      <div className="flex w-[75.6875rem] max-w-full flex-col items-stretch">
-        <div className="self-center flex w-[51.625rem] max-w-full flex-col items-center font-normal">
-          <h2 className="text-[rgba(22,28,45,1)] text-6xl leading-none tracking-tighter text-center max-md:max-w-full max-md:text-4xl font-serif">
+    <section className="bg-[rgba(255,251,250,1)] py-16 px-6">
+      <div className="max-w-6xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl text-[rgba(22,28,45,1)] font-serif leading-none tracking-tighter mb-4">
             Our Collaborates
           </h2>
-          <p className="text-[rgba(55,55,55,1)] text-xl leading-relaxed mt-2 font-sans">
+          <p className="text-lg md:text-xl text-[rgba(55,55,55,1)] font-sans max-w-2xl mx-auto">
             Industry-leading expertise and trusting us
           </p>
         </div>
-        
-        <div className="w-full mt-16 max-md:max-w-full max-md:mt-10">
-          <div className="flex w-full items-center gap-6 flex-wrap max-md:max-w-full">
-            {partners.map((partner, index) => (
+
+        {/* Partners Grid */}
+        <div className="flex justify-center items-center gap-8 md:gap-12">
+          {partners.map((partner, index) => (
+            <div key={index} className="flex-shrink-0">
               <Image
-                width={211}
-                height={201}
-                key={index}
+                width={160}
+                height={120}
                 src={partner}
-                className={`${index % 2 === 0 ? 'aspect-[1.26] w-[13.1875rem]' : 'aspect-[1.45] w-[12.5625rem] min-w-60 shrink grow'} object-contain self-stretch shrink-0 my-auto`}
+                className="w-32 h-24 md:w-40 md:h-32 lg:w-48 lg:h-36 object-contain"
                 alt={`Partner ${index + 1}`}
               />
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

@@ -63,7 +63,7 @@ export const WhyChooseUs: React.FC = () => {
           </p>
         </div>
 
-        <div className="h-[35.625rem] text-black text-center mt-14 max-md:max-w-full max-md:mt-10 font-urbanist">
+        <div className=" text-black text-center mt-14 max-md:max-w-full max-md:mt-10 font-urbanist">
           <div className="w-full max-md:max-w-full">
             <div className="flex items-center gap-10 gap-x-24 flex-wrap max-md:max-w-full">
               {features.slice(0, 3).map((feature) => (

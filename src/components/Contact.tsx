@@ -1,8 +1,8 @@
 "use client";
-import { useState } from 'react';
-import Image from 'next/image';
-import { Twitter, Instagram, Facebook } from 'lucide-react';
-import emailjs from '@emailjs/browser';
+import { useState } from "react";
+import Image from "next/image";
+import { Twitter, Instagram, Facebook } from "lucide-react";
+import emailjs from "@emailjs/browser";
 
 interface FormData {
   firstName: string;
@@ -15,35 +15,39 @@ interface FormData {
 
 export const Contact: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
-    firstName: '',
-    email: '',
-    phone: '',
-    company: '',
-    services: '',
-    message: ''
+    firstName: "",
+    email: "",
+    phone: "",
+    company: "",
+    services: "",
+    message: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setSubmitStatus('idle');
+    setSubmitStatus("idle");
 
     try {
       // EmailJS configuration - Replace with your actual values from EmailJS dashboard
-      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '';
-      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID|| '';
-      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || '';
+      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "";
+      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "";
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "";
 
       const templateParams = {
         from_name: formData.firstName,
@@ -52,23 +56,29 @@ export const Contact: React.FC = () => {
         company: formData.company,
         services: formData.services,
         message: formData.message,
-        to_email: 'dharmikclothing@gmail.com'
+        to_email: "dharmikclothing@gmail.com",
       };
 
       await emailjs.send(serviceId, templateId, templateParams, publicKey);
 
-      setSubmitStatus('success');
+      setSubmitStatus("success");
       setFormData({
-        firstName: '',
-        email: '',
-        phone: '',
-        company: '',
-        services: '',
-        message: ''
+        firstName: "",
+        email: "",
+        phone: "",
+        company: "",
+        services: "",
+        message: "",
       });
+      setTimeout(() => {
+        setSubmitStatus("idle");
+      }, 5000);
     } catch (error) {
-      console.error('Error sending email:', error);
-      setSubmitStatus('error');
+      console.error("Error sending email:", error);
+      setSubmitStatus("error");
+      setTimeout(() => {
+        setSubmitStatus("idle");
+      }, 5000);
     } finally {
       setIsSubmitting(false);
     }
@@ -82,7 +92,7 @@ export const Contact: React.FC = () => {
         className="absolute h-full w-full object-cover inset-0"
         alt="Contact background"
       />
-      
+
       <div className="relative flex items-center gap-10 gap-x-14 justify-center flex-wrap max-md:max-w-full">
         <div className="self-stretch min-w-60 min-h-[30rem] w-[32rem] my-auto max-md:max-w-full">
           <div className="flex w-full max-w-[33rem] flex-col max-md:max-w-full">
@@ -90,9 +100,10 @@ export const Contact: React.FC = () => {
               Get in Touch
             </h2>
             <p className="text-[rgba(136,85,33,1)] text-xl font-normal leading-relaxed self-stretch mt-4 max-md:max-w-full font-sans">
-              Have a question or a project in mind? I&apos;d love to hear from you. Let&apos;s chat and make something amazing together.
+              Have a question or a project in mind? I&apos;d love to hear from
+              you. Let&apos;s chat and make something amazing together.
             </p>
-            
+
             <div className="flex gap-4 text-base text-[#1F1F1F] font-normal mt-16 max-md:mt-10 font-sans">
               <Image
                 src="/images/phone.svg"
@@ -124,10 +135,11 @@ export const Contact: React.FC = () => {
                 alt="Location icon"
               />
               <div className="basis-auto text-sm grow shrink max-md:max-w-full">
-                MRR COMPLEX, ICICI Bank Building, Plot No.21, NH9 Highway, EP Lecturers ColonyHayathnager, Telangana 501505
+                MRR COMPLEX, ICICI Bank Building, Plot No.21, NH9 Highway, EP
+                Lecturers ColonyHayathnager, Telangana 501505
               </div>
             </div>
-            
+
             <div className="flex items-center gap-6  mt-12 max-md:mt-10">
               <div className="flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-b from-[#885521] to-[#64462C] hover:from-[#6B4420] hover:to-[#4A3422] transition-all duration-200">
                 <Twitter className="w-4 h-4 text-white" />
@@ -141,8 +153,11 @@ export const Contact: React.FC = () => {
             </div>
           </div>
         </div>
-        
-        <form onSubmit={handleSubmit} className="self-stretch min-w-60 text-sm text-[rgba(141,141,141,1)] w-[43rem] my-auto rounded-none max-md:max-w-full font-sans">
+
+        <form
+          onSubmit={handleSubmit}
+          className="self-stretch min-w-60 text-sm text-[rgba(141,141,141,1)] w-[43rem] my-auto rounded-none max-md:max-w-full font-sans"
+        >
           <div className="flex w-full items-stretch gap-8 font-normal flex-wrap max-md:max-w-full">
             <div className="bg-[rgba(136,85,33,0.06)] flex items-center gap-2.5 grow shrink basis-auto px-4 py-3.5 rounded-lg font-sans">
               <input
@@ -215,13 +230,13 @@ export const Contact: React.FC = () => {
           </div>
 
           {/* Status Messages */}
-          {submitStatus === 'success' && (
+          {submitStatus === "success" && (
             <div className="mt-4 p-3 bg-green-100 border border-green-400 text-green-700 rounded-lg">
               Message sent successfully! We&apos;ll get back to you soon.
             </div>
           )}
 
-          {submitStatus === 'error' && (
+          {submitStatus === "error" && (
             <div className="mt-4 p-3 bg-red-100 border border-red-400 text-red-700 rounded-lg">
               Failed to send message. Please try again or contact us directly.
             </div>
@@ -233,7 +248,7 @@ export const Contact: React.FC = () => {
               disabled={isSubmitting}
               className="w-[12.5rem] min-h-14 px-6 py-3 text-sm leading-relaxed bg-[rgba(136,85,33,1)] text-white font-bold tracking-tight rounded-xl hover:opacity-90 transition-all duration-200 font-sans disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {isSubmitting ? 'Sending...' : 'Send message'}
+              {isSubmitting ? "Sending..." : "Send message"}
             </button>
           </div>
         </form>

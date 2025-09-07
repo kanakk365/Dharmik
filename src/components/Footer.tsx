@@ -2,7 +2,8 @@ import React from "react";
 import Image from "next/image";
 export const Footer: React.FC = () => {
   return (
-    <footer className="flex w-full flex-col items-stretch text-white pt-20 px-0.5 max-md:max-w-full bg-gradient-to-b from-[#64462C] to-[#885521]">
+    <>
+    <footer className="flex w-full flex-col items-stretch text-white pt-20 px-4 md:px-0.5 max-md:max-w-full bg-gradient-to-b from-[#64462C] to-[#885521]">
       <div className="self-center flex gap-10 gap-x-40 flex-wrap max-md:max-w-full">
         <div className="flex min-w-60 flex-col items-stretch text-sm font-normal leading-relaxed justify-center w-[16.75rem]">
           <Image
@@ -114,9 +115,11 @@ export const Footer: React.FC = () => {
         </div>
       </div>
 
-      <div className="bg-[#794717] flex flex-col items-center text-base font-normal justify-center mt-9 px-16 py-4 max-md:max-w-full max-md:px-5">
-        <div>2025 @ Dharmik Clothing.All Rights Reserved.</div>
-      </div>
     </footer>
+
+    <div className="bg-[#794717] flex flex-col items-center text-base font-normal justify-center px-16 py-4 max-md:max-w-full max-md:px-5">
+      <div>2025 @ Dharmik Clothing.All Rights Reserved.</div>
+    </div>
+    </>
   );
 };

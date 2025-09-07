@@ -42,7 +42,7 @@ export const Process: React.FC = () => {
                   >
                     <Reveal variant="fade-right" delay={index * 0.06}>
                       <div className="max-w-40 min-h-16 flex items-center justify-center bg-[#8b6a49] p-2 rounded-lg">
-                        <h3 className="text-xl sm:text-base text-center font-semibold font-serif">
+                        <h3 className="text-base text-center font-semibold font-serif">
                           {index === 0 && "Consultation & Planning"}
                           {index === 2 && "Material Sourcing"}
                           {index === 4 && "Packaging & Delivery"}
@@ -72,10 +72,10 @@ export const Process: React.FC = () => {
                   >
                     <Reveal variant="fade-left" delay={index * 0.06}>
                       <div className="max-w-40 min-h-16 flex items-center justify-center bg-[#8b6a49] p-2 rounded-lg">
-                        <h3 className="text-xl sm:text-base text-center font-semibold font-serif">
+                        <h3 className="text-base text-center font-semibold font-serif">
                           {index === 1 && "Design & Development"}
                           {index === 3 && "Production & Quality Control"}
-                          {index === 5 && "Packaging & Delivery"}
+                          {index === 5 && "Launch & Support"}
                         </h3>
                       </div>
                     </Reveal>
@@ -113,7 +113,7 @@ export const Process: React.FC = () => {
               "Material Sourcing",
               "Production & Quality Control",
               "Packaging & Delivery",
-              "Packaging & Delivery",
+              "Launch & Support",
             ];
 
             return (
@@ -141,7 +141,7 @@ export const Process: React.FC = () => {
                 <div className="flex-1">
                   <Reveal variant="fade-up" delay={index * 0.06 + 0.03}>
                     <div className="bg-[#8b6a49] p-3 rounded-lg min-h-28 flex items-center">
-                      <h3 className="font-semibold font-serif text-white text-center">
+                      <h3 className="font-semibold text-xl font-serif text-white text-center">
                         {stepTexts[index]}
                       </h3>
                     </div>

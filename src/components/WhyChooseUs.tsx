@@ -45,7 +45,7 @@ export const WhyChooseUs: React.FC = () => {
   return (
     <section
       id="why-us"
-      className="flex flex-col relative min-h-[59.125rem] items-center justify-center px-20 py-20 max-md:max-w-full max-md:mr-0.5 max-md:px-5"
+      className="flex flex-col relative min-h-[59.125rem] items-center justify-center px-20 py-20 mx-auto max-md:max-w-full max-md:px-5"
     >
       <Image
         width={1174}
@@ -68,7 +68,7 @@ export const WhyChooseUs: React.FC = () => {
 
         <div className=" text-black text-center mt-14 max-md:max-w-full max-md:mt-10 font-urbanist">
           <div className="w-full max-md:max-w-full">
-            <div className="flex items-center gap-10 gap-x-24 flex-wrap max-md:max-w-full">
+            <div className="flex items-center justify-center gap-10 gap-x-24 flex-wrap max-md:max-w-full">
               {features.slice(0, 3).map((feature, index) => (
                 <Reveal key={feature.title} variant="fade-up" delay={index * 0.06}>
                   <div
@@ -105,7 +105,7 @@ export const WhyChooseUs: React.FC = () => {
               ))}
             </div>
 
-            <div className="flex items-center gap-10 gap-x-24 flex-wrap mt-20 max-md:max-w-full max-md:mt-10">
+            <div className="flex items-center justify-center gap-10 gap-x-24 flex-wrap mt-20 max-md:max-w-full max-md:mt-10">
               {features.slice(3, 6).map((feature, index) => (
                 <Reveal key={feature.title} variant="fade-up" delay={index * 0.06}>
                   <div

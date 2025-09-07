@@ -28,9 +28,12 @@ export const Hero: React.FC = () => {
             </p>
           </Reveal>
           <Reveal variant="fade-up" delay={0.1}>
-            <button className="px-8 py-4 bg-gradient-to-r from-[#64462c] to-[#885521] text-white font-bold text-sm rounded-lg hover:opacity-90 transition-all duration-200 font-sans">
+            <a
+              href="#contact"
+              className="inline-block px-8 py-4 bg-gradient-to-r from-[#64462c] to-[#885521] text-white font-bold text-sm rounded-lg hover:opacity-90 transition-all duration-200 font-sans"
+            >
               START YOUR JOURNEY
-            </button>
+            </a>
           </Reveal>
         </div>
 

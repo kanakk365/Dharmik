@@ -86,7 +86,7 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="flex flex-col relative min-h-[41rem] w-full items-center justify-center px-20  max-md:max-w-full max-md:px-5 py-28 ">
+    <section id="contact" className="flex flex-col relative min-h-[41rem] w-full items-center justify-center px-20 max-md:max-w-full max-md:px-5 py-28 max-md:py-16">
       <Image
         src="https://api.builder.io/api/v1/image/assets/TEMP/43a7ff149b3d053d8e1c3a371e18b2cf97052b78?placeholderIfAbsent=true"
         fill
@@ -94,8 +94,8 @@ export const Contact: React.FC = () => {
         alt="Contact background"
       />
 
-      <div className="relative flex items-center gap-10 gap-x-14 justify-center flex-wrap max-md:max-w-full">
-        <div className="self-stretch min-w-60 min-h-[30rem] w-[32rem] my-auto max-md:max-w-full">
+      <div className=" container relative flex items-start gap-10 gap-x-14 justify-center flex-wrap max-md:flex-col max-md:items-center max-md:gap-8 max-md:max-w-full">
+        <div className="self-stretch min-w-60  my-auto max-md:max-w-full max-md:min-h-0">
           <div className="flex w-full max-w-[33rem] flex-col max-md:max-w-full">
             <Reveal as="h2" className="text-[rgba(22,28,45,1)] text-6xl font-normal leading-none tracking-tighter text-left max-md:text-4xl font-serif" variant="fade-up">
               Get in Touch
@@ -150,7 +150,7 @@ export const Contact: React.FC = () => {
             </Reveal>
 
             <Reveal variant="fade-up" delay={0.25}>
-              <div className="flex items-center gap-6  mt-12 max-md:mt-10">
+              <div className="flex items-center gap-6 mt-12 max-md:mt-10 max-md:gap-4 max-md:justify-center">
                 <div className="flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-b from-[#885521] to-[#64462C] hover:from-[#6B4420] hover:to-[#4A3422] transition-all duration-200">
                   <Twitter className="w-4 h-4 text-white" />
                 </div>
@@ -168,10 +168,10 @@ export const Contact: React.FC = () => {
         <Reveal variant="fade-left" delay={0.1}>
         <form
           onSubmit={handleSubmit}
-          className="self-stretch min-w-60 text-sm text-[rgba(141,141,141,1)] w-[43rem] my-auto rounded-none max-md:max-w-full font-sans"
+          className="self-stretch min-w-96 text-sm text-[rgba(141,141,141,1)] my-auto rounded-none max-md:max-w-full max-md:w-full font-sans"
         >
-          <div className="flex w-full items-stretch gap-8 font-normal flex-wrap max-md:max-w-full">
-            <div className="bg-[rgba(136,85,33,0.06)] flex items-center gap-2.5 grow shrink basis-auto px-4 py-3.5 rounded-lg font-sans">
+          <div className="flex w-full items-stretch gap-8 font-normal flex-wrap max-md:gap-4 max-md:flex-col max-md:max-w-full">
+            <div className="bg-[rgba(136,85,33,0.06)] flex items-center gap-2.5 grow shrink basis-auto px-4 py-3.5 rounded-lg font-sans max-md:w-full max-md:px-6 max-md:basis-full">
               <input
                 type="text"
                 name="firstName"
@@ -182,7 +182,7 @@ export const Contact: React.FC = () => {
                 className="self-stretch my-auto bg-transparent outline-none w-full font-sans"
               />
             </div>
-            <div className="bg-[rgba(136,85,33,0.06)] flex items-center gap-2.5 whitespace-nowrap grow shrink basis-auto px-4 py-3.5 rounded-lg font-sans">
+            <div className="bg-[rgba(136,85,33,0.06)] flex items-center gap-2.5 whitespace-nowrap grow shrink basis-auto px-4 py-3.5 rounded-lg font-sans max-md:w-full max-md:px-6 max-md:basis-full">
               <input
                 type="email"
                 name="email"
@@ -195,8 +195,8 @@ export const Contact: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex w-full items-stretch gap-8 font-normal flex-wrap mt-6 max-md:max-w-full">
-            <div className="bg-[rgba(136,85,33,0.06)] flex items-center gap-2.5 grow shrink basis-auto px-4 py-3.5 rounded-lg font-sans">
+          <div className="flex w-full items-stretch gap-8 font-normal flex-wrap mt-6 max-md:gap-4 max-md:flex-col max-md:max-w-full">
+            <div className="bg-[rgba(136,85,33,0.06)] flex items-center gap-2.5 grow shrink basis-auto px-4 py-3.5 rounded-lg font-sans max-md:w-full max-md:px-6 max-md:basis-full">
               <input
                 type="tel"
                 name="phone"
@@ -206,7 +206,7 @@ export const Contact: React.FC = () => {
                 className="self-stretch my-auto bg-transparent outline-none w-full font-sans"
               />
             </div>
-            <div className="bg-[rgba(136,85,33,0.06)] flex items-center gap-2.5 whitespace-nowrap grow shrink basis-auto px-4 py-3.5 rounded-lg font-sans">
+            <div className="bg-[rgba(136,85,33,0.06)] flex items-center gap-2.5 whitespace-nowrap grow shrink basis-auto px-4 py-3.5 rounded-lg font-sans max-md:w-full max-md:px-6 max-md:basis-full">
               <input
                 type="text"
                 name="company"
@@ -218,7 +218,7 @@ export const Contact: React.FC = () => {
             </div>
           </div>
 
-          <div className="bg-[rgba(136,85,33,0.06)] flex items-center gap-2.5 font-normal mt-6 px-4 py-3.5 rounded-lg font-sans">
+          <div className="bg-[rgba(136,85,33,0.06)] flex items-center gap-2.5 font-normal mt-6 px-4 py-3.5 rounded-lg font-sans max-md:w-full max-md:px-6">
             <input
               type="text"
               name="services"
@@ -229,7 +229,7 @@ export const Contact: React.FC = () => {
             />
           </div>
 
-          <div className="bg-[rgba(136,85,33,0.06)] flex min-h-[10.5rem] gap-2.5 font-normal mt-6 pt-2 pb-24 px-4 rounded-lg max-md:pb-20 font-sans">
+          <div className="bg-[rgba(136,85,33,0.06)] flex min-h-[10.5rem] gap-2.5 font-normal mt-6 pt-2 pb-24 px-4 rounded-lg max-md:pb-16 max-md:min-h-[8rem] font-sans max-md:w-full max-md:px-6">
             <textarea
               name="message"
               placeholder="Your message"
@@ -254,11 +254,11 @@ export const Contact: React.FC = () => {
             </div>
           )}
 
-          <div className="mt-8">
+          <div className="mt-8 flex justify-end max-md:justify-center">
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-[12.5rem] min-h-14 px-6 py-3 text-sm leading-relaxed bg-[rgba(136,85,33,1)] text-white font-bold tracking-tight rounded-xl hover:opacity-90 transition-all duration-200 font-sans disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-[12.5rem] min-h-14 px-6 py-3 text-sm leading-relaxed bg-[rgba(136,85,33,1)] text-white font-bold tracking-tight rounded-xl hover:opacity-90 transition-all duration-200 font-sans disabled:opacity-50 disabled:cursor-not-allowed max-md:w-full max-md:px-8"
             >
               {isSubmitting ? "Sending..." : "Send message"}
             </button>
